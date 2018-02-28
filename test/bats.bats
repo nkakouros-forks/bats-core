@@ -465,4 +465,8 @@ END_OF_ERR_MSG
   [ "${lines[4]}" = '# foo' ]
   [ "${lines[5]}" = '# bar' ]
   [ "${lines[6]}" = '# baz' ]
+
+@test "test inter-test communication with BATS_BUCKET" {
+  run bats "$FIXTURE_ROOT/bats_bucket.bats"
+  [ "$status" -eq 0 ]
 }
