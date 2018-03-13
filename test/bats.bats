@@ -378,6 +378,7 @@ END_OF_ERR_MSG
   [ "${lines[11]}" = 'ok 11 ' ]   # empty name from single quote
 }
 
+<<<<<<< HEAD
 @test "duplicate tests cause a warning on stderr" {
   run bats "$FIXTURE_ROOT/duplicate-tests.bats"
   [ $status -eq 1 ]

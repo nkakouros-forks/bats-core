@@ -69,12 +69,15 @@ for filename in "$@"; do
           status=1
         fi
         ;;
+      "declare"*)
+        eval "$line"
+        ;;
       * )
         printf '%s\n' "$line"
         ;;
       esac
     done
-  } < <( bats-exec-test "${flags[@]}" "$filename" )
+  } < <( bats-exec-test ${flags[@]}-s "$filename" )
   offset=$(($offset + $index))
 done
 
