@@ -378,7 +378,6 @@ END_OF_ERR_MSG
   [ "${lines[11]}" = 'ok 11 ' ]   # empty name from single quote
 }
 
-<<<<<<< HEAD
 @test "duplicate tests cause a warning on stderr" {
   run bats "$FIXTURE_ROOT/duplicate-tests.bats"
   [ $status -eq 1 ]
@@ -466,6 +465,7 @@ END_OF_ERR_MSG
   [ "${lines[4]}" = '# foo' ]
   [ "${lines[5]}" = '# bar' ]
   [ "${lines[6]}" = '# baz' ]
+}
 
 @test "test inter-test communication with BATS_BUCKET" {
   run bats "$FIXTURE_ROOT/bats_bucket.bats"
