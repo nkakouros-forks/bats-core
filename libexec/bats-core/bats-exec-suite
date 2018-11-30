@@ -77,7 +77,7 @@ for filename in "$@"; do
         ;;
       esac
     done
-  } < <( bats-exec-test ${flags[@]} -s "$filename" )
+  } < <( bats-exec-test "${flags[@]}" -s "$filename" )
   offset=$(($offset + $index))
 done
 
