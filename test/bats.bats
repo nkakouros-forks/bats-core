@@ -468,6 +468,6 @@ END_OF_ERR_MSG
 }
 
 @test "test inter-test communication with BATS_BUCKET" {
-  run bats "$FIXTURE_ROOT/bats_bucket.bats"
+  run bats "$FIXTURE_ROOT/bats_bucket/"
   [ "$status" -eq 0 ]
 }
